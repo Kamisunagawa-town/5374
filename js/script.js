@@ -598,6 +598,17 @@ $(function() {
     var accordion_elm = $("#accordion");
     accordion_elm.html(accordionHTML);
 
+	// アコーディオンの初期化
+    accordion_elm.find('.accordion-body').each(function() {
+      $(this).removeClass('in').css('height', '0px').hide();
+    });
+    accordion_elm.find('.accordion-toggle').click(function(e) {
+      e.preventDefault();
+      var target = $($(this).attr('href'));
+      accordion_elm.find('.accordion-body').not(target).removeClass('in').slideUp();
+      target.toggleClass('in').slideToggle();
+    });
+
     $('html,body').animate({scrollTop: 0}, 'fast');
 
     //アコーディオンのラベル部分をクリックしたら
