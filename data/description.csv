@@ -1,5 +1,8 @@
 label,sublabel,description,styles,bgcolor
-燃やさないごみ,,,img/moyasanai02.svg,#733b96
-資源,,,img/shigen02.svg,#77ae1f
-燃やすごみ,,,img/moyasu02.svg,#ea3b13
-びん,,,img/bin02.svg,#2dc7aa
+燃やせるごみ,,,img/moyasu02.svg,#ea3b13
+燃やせないごみ,,,img/moyasanai02.svg,#733b96
+生ごみ,,,,#2e8b57
+資源ごみ,,,img/shigen02.svg,#77ae1f
+小型家電,,,,#1e90ff
+粗大ごみ,,,,#e6b422
+危険ごみ,,,,#e02020
