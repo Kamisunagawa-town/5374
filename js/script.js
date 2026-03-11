@@ -525,29 +525,6 @@ $(function() {
           continue;
         }
 
-          var target_tag = "";
-          var furigana = "";
-          var target_tag = "";
-          var targets = description.targets;
-          for (var j in targets) {
-            var target = targets[j];
-            if (furigana != target.furigana) {
-              if (furigana != "") {
-                target_tag += "</ul>";
-              }
-
-              furigana = target.furigana;
-
-              target_tag += '<h4 class="initials">' + furigana + "</h4>";
-              target_tag += "<ul>";
-            }
-
-            target_tag += '<li style="list-style:none;"><div>' + target.name + "</div>";
-            target_tag += '<div class="note">' + target.notice + "</div></li>";
-          }
-
-          target_tag += "</ul>";
-
           var dateLabel = trash.getDateLabel();
           //あと何日かを計算する処理です。
           var leftDayText = "";
@@ -595,20 +572,6 @@ $(function() {
 
     $('html,body').animate({scrollTop: 0}, 'fast');
 
-    //アコーディオンのラベル部分をクリックしたら
-    $(".accordion-body").on("shown.bs.collapse", function() {
-      var body = $('body');
-      var accordion_offset = $($(this).parent().get(0)).offset().top;
-      body.animate({
-        scrollTop: accordion_offset
-      }, 50);
-    });
-    //アコーディオンの非表示部分をクリックしたら
-    $(".accordion-body").on("hidden.bs.collapse", function() {
-      if ($(".in").length == 0) {
-        $("html, body").scrollTop(0);
-      }
-    });
   }
 
   function onChangeSelect(row_index) {
