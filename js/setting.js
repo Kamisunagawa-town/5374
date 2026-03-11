@@ -5,9 +5,9 @@
 
 var SVGLabel = false; // SVGイメージを使用するときは、true。用意できない場合はfalse。
 
-var MaxDescription = 9; // ごみの最大種類、９を超えない場合は変更の必要はありません。
+var MaxDescription = 7; // ごみの最大種類、９を超えない場合は変更の必要はありません。
 
-var MaxMonth = 3;
+var MaxMonth = 12; // 今日から何ヶ月先までごみ収集日を計算するかの設定
 
 var WeekShift = true; // 休止期間なら週をずらすときは、true。金沢の仕様は、true。
 
