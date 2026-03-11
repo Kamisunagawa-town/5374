@@ -572,7 +572,7 @@ $(function() {
           accordionHTML +=
             '<div class="accordion-group" id="accordion-group' + d_no + '">' +
             '<div class="accordion-heading">' +
-            '<a class="accordion-toggle" style="height:' + accordion_height + 'px" data-toggle="collapse" data-parent="accordion" href="#collapse' + i + '">' +
+            '<div class="accordion-toggle" style="height:' + accordion_height + 'px">' +
             '<div class="left-day">' + leftDayText + '</div>' +
             '<div class="accordion-table" >';
           if (ableSVG && SVGLabel) {
@@ -582,12 +582,7 @@ $(function() {
           }
           accordionHTML += "</div>" +
             '<h6><p class="text-left date">' + dateLabel + "</p></h6>" +
-            "</a>" +
             "</div>" +
-            '<div id="collapse' + i + '" class="accordion-body collapse">' +
-            '<div class="accordion-inner">' +
-            description.description + "<br />" + target_tag +
-            '<div class="targetDays"></div></div>' +
             "</div>" +
             "</div>";
       }
@@ -597,17 +592,6 @@ $(function() {
 
     var accordion_elm = $("#accordion");
     accordion_elm.html(accordionHTML);
-
-	// アコーディオンの初期化
-    accordion_elm.find('.accordion-body').each(function() {
-      $(this).removeClass('in').css('height', '0px').hide();
-    });
-    accordion_elm.find('.accordion-toggle').click(function(e) {
-      e.preventDefault();
-      var target = $($(this).attr('href'));
-      accordion_elm.find('.accordion-body').not(target).removeClass('in').slideUp();
-      target.toggleClass('in').slideToggle();
-    });
 
     $('html,body').animate({scrollTop: 0}, 'fast');
 
