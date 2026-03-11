@@ -1,8 +1,9 @@
 label,sublabel,description,styles,bgcolor
-燃やせるごみ,,,img/moyasu02.svg,#ea3b13
-燃やせないごみ,,,img/moyasanai02.svg,#733b96
-生ごみ,,,img/moyasanai02.svg,#2e8b57
-資源ごみ,,,img/shigen02.svg,#77ae1f
-小型家電,,,img/moyasu02.svg,#1e90ff
-粗大ごみ,,,img/moyasu02.svg,#e6b422
-危険ごみ,,,img/moyasu02.svg,#e02020
+燃やせるごみ,,,,#ea3b13
+燃やせないごみ,,,,#733b96
+生ごみ,,,,#2e8b57
+資源ごみ,,,,#77ae1f
+小型家電,,,,#1e90ff
+粗大ごみ,,,,#e6b422
+危険ごみ,,,,#e02020
+
